@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+
+print("Interactive Command Tutor - Eta Team")
+print("Project setup is working.")
