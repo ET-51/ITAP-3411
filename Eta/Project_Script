@@ -38,7 +38,30 @@ Main features:
 #
 # This section should be done early because the other features depend on it.
 
+#[command, meaning, example]
+commands = [
+    ["pwd", "Shows the current working directory", "pwd"],
+    ["ls", "Lists files and directories", "ls -la"],
+    ["cd", "Changes the current directory", "cd Desktop"],
+    ["cat", "Displays the content of a file", "cat file.txt"],
+    ["mkdir", "Creates a new directory", "mkdir project"]
+]
 
+quiz_questions = [
+    ["Which command shows the current directory?", "pwd"],
+    ["Which command lists files and directories?", "ls"],
+    ["Which command changes the current directory?", "cd"],
+    ["Which command displays the content of a file?", "cat"],
+    ["Which command creates a new directory?", "mkdir"]
+]
+
+practice_tasks = [
+    ["Create a folder called test", "mkdir test"],
+    ["Create an empty file called notes.txt", "touch notes.txt"],
+    ["Show the content of file.txt", "cat file.txt"],
+    ["List files with detailed information", "ls -l"],
+    ["Show the current directory", "pwd"]
+]
 
 # =========================
 # LEARN MODE
@@ -52,6 +75,13 @@ Main features:
 # - Quiz Mode
 # - Practice Mode
 
+
+def learn_mode():
+    print ("\n--- Learn Mode ---")
+    for command in commands:
+        print("\nCommand:", command[0])
+        print("Meaning:", command[1])
+        print("Example:", command[2])
 
 
 # =========================
@@ -68,7 +98,24 @@ Main features:
 # - Learn Mode
 # - Practice Mode
 
+def quiz_mode():
+    print("\n--- Quiz Mode ---\n")
 
+    score = 0
+
+    for question in quiz_questions:
+        answer = input(question[0] + " ")
+
+        # lower() makes the answer lowercase, so PWD and pwd are treated the same
+        answer = answer.lower()
+
+        if answer == question[1]:
+            print("Correct!")
+            score = score + 1
+        else:
+            print("Wrong. Correct answer is:", question[1])
+
+    print("\nFinal score:", score, "/", len(quiz_questions))
 
 # =========================
 # PRACTICE MODE
@@ -88,6 +135,26 @@ Main features:
 # - Learn Mode
 # - Quiz Mode
 
+def practice_mode():
+    print("\n--- Practice Mode ---")
+
+    score = 0
+
+    for task in practice_tasks:
+        print("\nTask:", task[0])
+        answer = input("Type the command: ")
+
+        # lower() makes the answer lowercase
+        # strip() removes extra spaces at the beginning and end
+        answer = answer.lower().strip()
+
+        if answer == task[1]:
+            print("Correct!")
+            score = score + 1
+        else:
+            print("Wrong. Correct answer is:", task[1])
+
+    print("\nFinal score:", score, "/", len(practice_tasks))
 
 # =========================
 # SCORE SYSTEM
@@ -132,13 +199,13 @@ while True:
 
     choice = input("Choose an option: ")
 
-    if choice = "1":
-      print("Learn mode selected")
-    elif choice = "2":
-      print("Quiz mode selected")
-    elif choice = "3":
-      print("Practice mode selected")
-    elif choice = "4":
+    if choice == "1":
+      learn_mode()
+    elif choice == "2":
+      quiz_mode()
+    elif choice == "3":
+      practice_mode()
+    elif choice == "4":
       print("Goodbye")
       break
     else:
