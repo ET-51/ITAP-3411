@@ -1,4 +1,133 @@
 #!/usr/bin/python3
 
-print("Interactive Command Tutor - Eta Team")
+"""
+Interactive Command Tutor Script:
+
+This program helps students learn and practice Linux shell commands
+from Basic Command I and Basic Command II.
+
+Main features:
+
+1. Learn Mode:
+   Shows Linux commands with their meaning and example usage.
+   This helps students review commands before taking the quiz.
+
+2. Quiz Mode:
+   Asks the user direct questions about Linux commands and checks the answer.
+   The user receives a score at the end.
+
+3. Practice Mode:
+   Gives the user a real command-line task and asks them to type the correct command.
+   This mode is more practical because the user must write the command, not just choose an answer.
+
+4. Score System:
+   Counts correct answers in Quiz Mode and Practice Mode.
+   At the end, it displays the final score.
+
+5. Exit:
+   Allows the user to safely close the program from the main menu.
+"""
+
+# =========================
+# DATA SECTION
+# =========================
+# Here we store the main data used by the program:
+# - Linux commands for Learn Mode
+# - Questions for Quiz Mode
+# - Tasks for Practice Mode
+#
+# This section should be done early because the other features depend on it.
+
+
+
+# =========================
+# LEARN MODE
+# =========================
+# This function displays Linux commands with their meanings and examples.
+#
+# Depends on:
+# - DATA SECTION
+#
+# Does not depend on:
+# - Quiz Mode
+# - Practice Mode
+
+
+
+# =========================
+# QUIZ MODE
+# =========================
+# This function asks the user questions about Linux commands.
+# It checks the user's answer and counts the score.
+#
+# Depends on:
+# - DATA SECTION
+# - SCORE SYSTEM
+#
+# Does not depend on:
+# - Learn Mode
+# - Practice Mode
+
+
+
+# =========================
+# PRACTICE MODE
+# =========================
+# This function gives the user a real command-line task.
+# The user must type the correct Linux command.
+#
+# Example:
+# Task: Create a folder called test
+# Correct answer: mkdir test
+#
+# Depends on:
+# - DATA SECTION
+# - SCORE SYSTEM
+#
+# Does not depend on:
+# - Learn Mode
+# - Quiz Mode
+
+
+# =========================
+# SCORE SYSTEM
+# =========================
+# This part handles score counting and final score display.
+#
+# Used by:
+# - Quiz Mode
+# - Practice Mode
+#
+# This can be simple at first: count correct answers and print final score.
+# Later, it can be improved with percentage or feedback messages.
+
+
+# =========================
+# MAIN MENU
+# =========================
+# This is the main control area of the program.
+# It shows the user the available options:
+# 1. Learn Mode
+# 2. Quiz Mode
+# 3. Practice Mode
+# 4. Exit
+#
+# Depends on:
+# - Learn Mode
+# - Quiz Mode
+# - Practice Mode
+#
+# Important:
+# The main menu should be completed after the main feature functions exist,
+# because it will call those functions based on the user's choice.
+
+
+# =========================
+# PROGRAM START
+# =========================
+# This is where the program begins running.
+# It should start by showing the main menu.
+
+
+print("Interactive Command Tutor")
 print("Project setup is working.")
