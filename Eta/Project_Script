@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import os
 
 """
 Interactive Command Tutor Script:
@@ -64,6 +65,23 @@ practice_tasks = [
 ]
 
 # =========================
+# HELPER FUNCTIONS
+# =========================
+# Helper functions are small functions used by different parts of the program.
+
+def pause():
+    input("\nPress 'Enter' to return to the main menu...")
+    
+
+def clear_screen():
+    os.system("clear")
+    
+def print_header(title):
+    print("==============================")
+    print("--- ", title)
+    print("==============================\n")
+    
+# =========================
 # LEARN MODE
 # =========================
 # This function displays Linux commands with their meanings and examples.
@@ -75,14 +93,15 @@ practice_tasks = [
 # - Quiz Mode
 # - Practice Mode
 
-
 def learn_mode():
-    print ("\n--- Learn Mode ---")
+    clear_screen()
+    print_header("Learn Mode")
     for command in commands:
         print("\nCommand:", command[0])
         print("Meaning:", command[1])
         print("Example:", command[2])
 
+    pause()
 
 # =========================
 # QUIZ MODE
@@ -99,7 +118,8 @@ def learn_mode():
 # - Practice Mode
 
 def quiz_mode():
-    print("\n--- Quiz Mode ---\n")
+    clear_screen()
+    print_header("Quiz Mode")
 
     score = 0
 
@@ -115,8 +135,8 @@ def quiz_mode():
         else:
             print("Wrong. Correct answer is:", question[1])
 
-    print("\nFinal score:", score, "/", len(quiz_questions))
-
+    show_score(score, len(quiz_questions))
+    pause()
 # =========================
 # PRACTICE MODE
 # =========================
@@ -135,8 +155,10 @@ def quiz_mode():
 # - Learn Mode
 # - Quiz Mode
 
+
 def practice_mode():
-    print("\n--- Practice Mode ---")
+    clear_screen()
+    print_header("Practice Mode")
 
     score = 0
 
@@ -154,8 +176,9 @@ def practice_mode():
         else:
             print("Wrong. Correct answer is:", task[1])
 
-    print("\nFinal score:", score, "/", len(practice_tasks))
-
+    show_score(score, len(practice_tasks))
+    pause()
+    
 # =========================
 # SCORE SYSTEM
 # =========================
@@ -168,7 +191,16 @@ def practice_mode():
 # This can be simple at first: count correct answers and print final score.
 # Later, it can be improved with percentage or feedback messages.
 
+def show_score(score, total):
+    print("\nFinal score:", score, "/", total)
 
+    if score == total:
+        print("Excellent! You got all answers correct.")
+    elif score >= total / 2:
+        print("Good job, but you can still improve.")
+    else:
+        print("You need more practice. Try Learn Mode again.")
+        
 # =========================
 # MAIN MENU
 # =========================
@@ -189,9 +221,8 @@ def practice_mode():
 # because it will call those functions based on the user's choice.
 
 while True:
-    print("\n==============================")
-    print("Interactive Command Tutor")
-    print("==============================")
+    clear_screen()
+    print_header("Interactive Command Tutor")
     print("1. Learn Mode")
     print("2. Quiz Mode")
     print("3. Practice Mode")
@@ -210,6 +241,7 @@ while True:
       break
     else:
       print("invalid choice, try again.")
+      pause()
 
 # =========================
 # PROGRAM START
@@ -217,6 +249,3 @@ while True:
 # This is where the program begins running.
 # It should start by showing the main menu.
 
-
-print("Interactive Command Tutor")
-print("Project setup is working.")
