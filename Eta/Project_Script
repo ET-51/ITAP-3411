@@ -121,6 +121,28 @@ Main features:
 # The main menu should be completed after the main feature functions exist,
 # because it will call those functions based on the user's choice.
 
+while True:
+    print("\n==============================")
+    print("Interactive Command Tutor")
+    print("==============================")
+    print("1. Learn Mode")
+    print("2. Quiz Mode")
+    print("3. Practice Mode")
+    print("4. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice = "1":
+      print("Learn mode selected")
+    elif choice = "2":
+      print("Quiz mode selected")
+    elif choice = "3":
+      print("Practice mode selected")
+    elif choice = "4":
+      print("Goodbye")
+      break
+    else:
+      print("invalid choice, try again.")
 
 # =========================
 # PROGRAM START
