@@ -1,4 +1,4 @@
-# Interactive Command Tutor Script 
+# Interactive Command Tutor 
 
 ## Project Description
 
@@ -49,11 +49,23 @@ To check if Git is installed, run:
 
 ## Installation
 
-Clone the GitHub repository:
+1. Open the GitHub repository.
+
+2. Click the green **Code** button.
+
+3. Make sure **HTTPS** is selected.
+
+4. Copy the repository link.
+
+5. Open the terminal in Kali Linux and run:
+
+    git clone <paste-the-repository-link-here>
+
+Example:
 
     git clone https://github.com/YOUR_USERNAME/ITAP-3411.git
 
-Go to the project folder:
+6. Go to the project folder:
 
     cd ITAP-3411/Eta
 
