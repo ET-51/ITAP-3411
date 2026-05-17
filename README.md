@@ -80,7 +80,7 @@ No special configuration is required.
 
 The program runs directly in the terminal using Python 3.
 
-Optional: if you want to run the program as an executable script using `./command_tutor.py`, give the file execute permission:
+if you want to run the program as an executable script using `./command_tutor.py`, give the file execute permission:
 
     chmod +x command_tutor.py
 
