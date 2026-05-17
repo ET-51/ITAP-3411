@@ -129,13 +129,6 @@ Example usage:
 
     Choose option 4 to view saved scores.
 
-## File Structure
-
-    ITAP-3411/
-    └── Eta/
-        ├── command_tutor.py
-        └── README.md
-
 When the program saves scores, it automatically creates:
 
     scores.txt
