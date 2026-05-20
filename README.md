@@ -80,19 +80,19 @@ No special configuration is required.
 
 The program runs directly in the terminal using Python 3.
 
-if you want to run the program as an executable script using `./command_tutor.py`, give the file execute permission:
+if you want to run the program as an executable script using `./Project_Script.py`, give the file execute permission:
 
-    chmod +x command_tutor.py
+    chmod +x cProject_Script.py
 
 ## How to Run
 
 Run the program using Python 3:
 
-    python3 command_tutor.py
+    python3 Project_Script.py
 
 Or, if you gave the file execute permission, run:
 
-    ./command_tutor.py
+    ./Project_Script.py
 
 ## Short Usage Example
 
